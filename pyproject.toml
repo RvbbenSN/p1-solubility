@@ -7,7 +7,10 @@ authors = [
     { name = "RvbbenSN", email = "rubbenserrano@gmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "jupyter>=1.1.1",
+    "pandas>=3.1.0",
+]
 
 [project.scripts]
 p1-solubility = "p1_solubility:main"
