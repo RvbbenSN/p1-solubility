@@ -11,6 +11,7 @@ data/raw/*
 data/processed/*
 !data/**/.gitkeep
 !data/**/README.md
+!data/processed/curation_report.md
 mlruns/
 
 # Secretos

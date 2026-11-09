@@ -47,9 +47,11 @@ The module must ensure complete scientific traceability: every valid molecule is
 from dataclasses import dataclass
 from typing import Optional
 
+
 @dataclass(frozen=True)
 class CurationResult:
     """Immutable result of curating a single chemical structure."""
+
     success: bool
     canonical_smiles: Optional[str]
     error_reason: Optional[str]
@@ -81,10 +83,9 @@ def curate_smiles(smiles: str) -> CurationResult:
 ```python
 import pandas as pd
 
+
 def curate_dataset(
-    df: pd.DataFrame,
-    smiles_col: str,
-    id_col: Optional[str] = None
+    df: pd.DataFrame, smiles_col: str, id_col: Optional[str] = None
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
     """
     Curates an entire pandas DataFrame of chemical records.
